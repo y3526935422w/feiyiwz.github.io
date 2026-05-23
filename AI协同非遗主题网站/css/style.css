@@ -1,0 +1,25 @@
+body {
+  font-family: "微软雅黑", serif;
+  background-color: #fdf8f0;
+  color: #333;
+  scroll-behavior: smooth;
+}
+.navbar-scroll {
+  background-color: #9c2c1a !important;
+  transition: 0.3s;
+}
+.card-hover {
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+.card-hover:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+.card-img-top {
+  height: 220px;
+  object-fit: cover;
+}
+footer {
+  background-color: #9c2c1a;
+}

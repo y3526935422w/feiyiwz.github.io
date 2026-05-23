@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>非遗剪纸文化传承网</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- 导航栏 -->
+<nav id="mainNav" class="navbar navbar-expand-lg navbar-dark bg-danger fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">🪡 非遗剪纸</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link active" href="index.html#home">首页</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html#show">作品展示</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html#story">传承人故事</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html#craft">工艺科普</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html#message">留言区</a></li>
+      </ul>
+      <!-- 搜索框：跳转到对应作品详情 -->
+      <form class="d-flex ms-3" onsubmit="return searchGo()">
+        <input id="searchInput" class="form-control me-2" type="search" placeholder="输入：生肖/花鸟/福字">
+        <button class="btn btn-light" type="submit">搜索</button>
+      </form>
+    </div>
+  </div>
+</nav>
+
+<!-- 轮播图（高度已缩小） -->
+<header id="home" class="pt-5 mt-4">
+  <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner" style="max-height:380px; overflow:hidden;">
+      <div class="carousel-item active">
+        <img src="https://img0.baidu.com/it/u=3628124211,1869262918&fm=253&fmt=auto&app=138&f=JPEG?w=966&h=500" class="d-block w-100" alt="剪纸作品1">
+        <div class="carousel-caption">
+          <h2>非遗剪纸艺术</h2>
+          <p>指尖生花 · 传承千年</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="https://img0.baidu.com/it/u=3617164773,2093941328&fm=253&fmt=auto&app=138&f=JPEG?w=938&h=475" class="d-block w-100" alt="剪纸作品2">
+        <div class="carousel-caption">
+          <h2>一刀一剪</h2>
+          <p>刻画出传统文化魅力</p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" data-bs-target="#carouselExample" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" data-bs-target="#carouselExample" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+  </div>
+</header>
+
+<!-- 作品展示（点击跳转到详情页） -->
+<section id="show" class="py-5 bg-white">
+  <div class="container">
+    <h2 class="text-center text-danger mb-4">非遗剪纸作品展示</h2>
+    <div class="row g-4">
+      <div class="col-lg-4 col-md-6 col-sm-12">
+        <div class="card card-hover shadow-sm" onclick="location.href='detail1.html'">
+          <img src="https://img2.baidu.com/it/u=5843358,443218350&fm=253&fmt=auto&app=138&f=JPEG?w=890&h=500" class="card-img-top" alt="生肖剪纸">
+          <div class="card-body text-center">
+            <h5 class="card-title">生肖剪纸</h5>
+            <p class="card-text">传统民俗剪纸，寓意吉祥如意</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 col-sm-12">
+        <div class="card card-hover shadow-sm" onclick="location.href='detail2.html'">
+          <img src="https://img1.baidu.com/it/u=432338285,1416408251&fm=253&fmt=auto&app=138&f=JPEG?w=890&h=500" class="card-img-top" alt="花鸟剪纸">
+          <div class="card-body text-center">
+            <h5 class="card-title">花鸟剪纸</h5>
+            <p class="card-text">精致细腻，栩栩如生</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 col-sm-12">
+        <div class="card card-hover shadow-sm" onclick="location.href='detail3.html'">
+          <img src="https://img2.baidu.com/it/u=502217440,2109291225&fm=253&fmt=auto&app=138&f=JPEG?w=911&h=500" class="card-img-top" alt="福字剪纸">
+          <div class="card-body text-center">
+            <h5 class="card-title">福字剪纸</h5>
+            <p class="card-text">新春祈福，传统经典样式</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 传承人故事 -->
+<section id="story" class="py-5">
+  <div class="container">
+    <h2 class="text-center text-danger mb-4">非遗传承人故事</h2>
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <img src="https://p6-flow-imagex-sign.byteimg.com/labis/image/d6c0b55b812706912494da86662dfd0b~tplv-a9rns2rl98-pc_smart_face_crop-v1:480:360.image?lk3s=8e244e95&rcl=202605231409393CB46BF4C058F9195E6E&rrcfp=cee388b0&x-expires=2094876585&x-signature=zPWeNFP%2FBBIH2d91BKeuSAg7dfs%3D" class="img-fluid rounded shadow" alt="传承人">
+      </div>
+      <div class="col-md-6 mt-3 mt-md-0">
+        <h4>高少萍（国家级非遗・漳浦剪纸传承人）</h4>
+        <p class="lead">高少萍，女，福建漳浦人，深耕剪纸四十余年，是漳浦剪纸（联合国教科文组织人类非遗代表作）的核心传承人。她自幼受闽南剪纸氛围熏陶，师从当地老艺人，练就一手 “金剪刀”，作品兼具传统民俗底蕴与现代审美创新。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 工艺科普 -->
+<section id="craft" class="py-5 bg-white">
+  <div class="container">
+    <h2 class="text-center text-danger mb-4">剪纸工艺科普</h2>
+    <div class="row">
+      <div class="col-lg-10 mx-auto">
+        <ul class="list-group list-group-flush lead">
+          <li class="list-group-item"><strong>选材：</strong>选用宣纸、红纸等韧性强的纸张</li>
+          <li class="list-group-item"><strong>画稿：</strong>手绘图案，确定造型与细节</li>
+          <li class="list-group-item"><strong>剪刻：</strong>使用剪刀、刻刀精细加工，先内后外</li>
+          <li class="list-group-item"><strong>装裱：</strong>整理定型，装框保存</li>
+          <li class="list-group-item"><strong>文化：</strong>多用于节日装饰、婚庆、祈福等民俗场景</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 留言区 -->
+<section id="message" class="py-5">
+  <div class="container">
+    <h2 class="text-center text-danger mb-4">互动留言区</h2>
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <form id="messageForm">
+          <div class="mb-3">
+            <label class="form-label">你的昵称</label>
+            <input type="text" id="name" class="form-control" placeholder="请输入昵称" required>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">留言内容</label>
+            <textarea id="content" class="form-control" rows="4" placeholder="分享你对剪纸艺术的感受..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-danger w-100">提交留言</button>
+        </form>
+        <div id="messageList" class="mt-4"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 返回顶部 -->
+<button id="toTop" class="btn btn-danger rounded-circle" style="position:fixed;bottom:30px;right:30px;display:none;width:50px;height:50px;">↑</button>
+
+<!-- 页脚 -->
+<footer class="text-white text-center py-3">
+  <div class="container">
+    <p>© 2025 非遗剪纸文化传承网 | 无版权可商用素材</p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
